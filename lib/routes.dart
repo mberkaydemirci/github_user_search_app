@@ -11,7 +11,7 @@ class Routes {
           builder: (_) => Scaffold(
             appBar: AppBar(),
             body: Center(
-              child: Text('Ters giden birşeyler oldu'),
+              child: Text('Something went wrong'),
             ),
           ),
         );
