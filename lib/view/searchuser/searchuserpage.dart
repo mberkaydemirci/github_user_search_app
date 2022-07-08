@@ -39,7 +39,7 @@ class _UserSearchPageState extends State<UserSearchPage> {
                   shrinkWrap: true,
                   // itemCount: context.watch<UserSearchViewModel>().userModel.totalCount,
                   //The reason why I entered the number 30, the information count came in 30
-                  itemCount: 30,
+                  itemCount: context.watch<UserSearchViewModel>().userModel.totalCount! > 30 ? 30 : context.watch<UserSearchViewModel>().userModel.totalCount,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
                     return InkWell(
