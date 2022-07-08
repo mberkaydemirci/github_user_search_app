@@ -37,7 +37,9 @@ class _UserSearchPageState extends State<UserSearchPage> {
               Expanded(
                 child: ListView.builder(
                   shrinkWrap: true,
-                  itemCount: context.watch<UserSearchViewModel>().userModel.totalCount,
+                  // itemCount: context.watch<UserSearchViewModel>().userModel.totalCount,
+                  //The reason why I entered the number 30, the information count came in 30
+                  itemCount: 30,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
                     return InkWell(
@@ -52,6 +54,7 @@ class _UserSearchPageState extends State<UserSearchPage> {
                           child: ListTile(
                             leading: Image.network('${context.watch<UserSearchViewModel>().userModel.items![index].avatarUrl}'),
                             title: Text('${context.watch<UserSearchViewModel>().userModel.items![index].login}'),
+                            // subtitle: Text('${context.watch<UserSearchViewModel>().userModel.items![index].reposUrl}'),
                             subtitle: Text('${context.watch<UserSearchViewModel>().userModel.items![index].reposUrl}'),
                           ),
                         ),
